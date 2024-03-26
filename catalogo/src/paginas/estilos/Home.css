@@ -1,0 +1,35 @@
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+  }
+
+  .main-content {
+    background-color: #e1eceb;
+    display: flex;
+    gap:75px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .titulo {
+    text-align: center;
+    }
+
+    .input-container {
+      display: flex;
+      justify-content: center;
+  }
+
+  .input {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 400px; /* Ancho del input */
+}
+
+.input:focus {
+    outline: none;
+    border-color: #000000; /* Color del borde al estar enfocado */
+}

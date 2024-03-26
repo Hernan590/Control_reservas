@@ -1,0 +1,65 @@
+.descripcion-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 90%; /* Ancho del contenedor al 90% del ancho de la ventana */
+    margin: 0 auto; /* Centrar el contenedor horizontalmente */
+    max-width: 1200px; /* Ancho máximo del contenedor */
+}
+
+.imagen-container {
+    margin-right: 50px; /* Agrega un margen izquierdo */
+}
+
+.imagen-wrapper {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 2px solid #333; /* Color oscuro para el borde */
+
+}
+
+.imagen {
+    width: 340px;
+    height: 360px;
+}
+
+.info-container {
+    flex: 1;
+    width: 50%; /* Ancho del contenedor de la información al 50% del contenedor principal */
+    word-wrap: break-word; /* Opción 1: Envolver palabras */
+
+}
+
+.titulo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.descripcion {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.detalles {
+    font-size: 14px;
+    color: #666;
+}
+
+.volver-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  
+  .volver-button:hover {
+    background-color: #0056b3;
+  }
+  
