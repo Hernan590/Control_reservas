@@ -18,5 +18,12 @@ function App() {
     </Router>
   );
 }
+{/* <Router>
+<Routes>
+  <Route path="/" element={<Login logeado={setlogeado}/>} />
+  <Route path="/Admin" element={<Admin islogeado={islogeado}/>}/>
+  <Route path="/Formulario" element={<Formulario islogeado={islogeado}/>}/>
+</Routes>
+</Router> */}
 
 export default App

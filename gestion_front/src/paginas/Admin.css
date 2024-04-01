@@ -1,0 +1,4 @@
+.contenedor-altura-fija {
+    max-height: 600px; /* Establece la altura fija deseada */
+    overflow-y: auto; /* Habilita el scroll vertical si es necesario */
+  }

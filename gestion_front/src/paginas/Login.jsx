@@ -4,7 +4,7 @@ import Swal from 'sweetalert2';
 import Boton from '../componentes/Boton';
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLock, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faLock, faUser, faSignInAlt  } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 
 const Login = ({ logeado }) => {
@@ -26,7 +26,7 @@ const Login = ({ logeado }) => {
 
     try {
       // Envía una solicitud POST al endpoint de inicio de sesión en el servidor
-      const response = await fetch('http://localhost:3000/usuario/login', {
+      const response = await fetch('http://localhost:3005/usuario/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -35,7 +35,7 @@ const Login = ({ logeado }) => {
       });
       if (response.ok) {
         const { id, rol } = await response.json();
-          logeado();
+          logeado(rol);
           if (rol === 1) {
             Swal.fire({
               icon: 'success',
@@ -67,12 +67,12 @@ const Login = ({ logeado }) => {
   };
 
   return (
-    <div className="container">
+    <div id='contenedor_principal' className="container">
       <div className="row justify-content-center mt-5">
         <div className="col-md-6">
           <div className="card">
             <div className="card-body">
-              <h2 className="card-title">Login</h2>
+              <h2 className="card-title">Iniciar Sesion</h2>
               <form>
                 <div className="mb-3">
                   <label htmlFor="usuario" className="form-label"><b>Usuario</b></label>
@@ -88,7 +88,7 @@ const Login = ({ logeado }) => {
                     <input id='password' type="password" className="form-control" placeholder="Ingresa tu contraseña..." value={password} onChange={(e) => setPassword(e.target.value)}/>
                   </div>
                 </div>
-                <Boton Nombre="Iniciar Sesion" onClick={iniciarSesion}/>
+                <Boton Nombre="Iniciar Sesion " icon={faSignInAlt} onClick={iniciarSesion} clase={"btn btn-primary"}/>
               </form>
             </div>
           </div>
