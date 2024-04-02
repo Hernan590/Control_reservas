@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 26-03-2024 a las 05:56:14
+-- Tiempo de generación: 02-04-2024 a las 04:02:18
 -- Versión del servidor: 8.0.31
 -- Versión de PHP: 8.0.26
 
@@ -39,16 +39,22 @@ CREATE TABLE IF NOT EXISTS `control_reservas` (
   `usuario` int NOT NULL,
   `estado` int NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `control_reservas`
 --
 
 INSERT INTO `control_reservas` (`id`, `nombre_reserva`, `nombre_docente`, `estudiantes`, `equipo_simulador`, `fecha_reserva`, `hora_reserva`, `usuario`, `estado`) VALUES
-(2, 'SSS', 'SSSS', 3, 2, '2024-03-30', '16:25:00', 1, 1),
-(3, 'prueba', 'prueba', 4, 2, '2024-03-31', '17:50:00', 2, 1),
-(4, 'prueba', 'prueba', 7, 2, '2024-03-28', '14:49:00', 3, 1);
+(14, 'zvcxcx', 'adssd', 4, 2, '2024-03-31', '17:40:00', 2, 1),
+(13, 'PROBANDO', 'PROBANDO', 7, 1, '2024-03-30', '15:30:00', 3, 1),
+(12, 'sssss', 'sssss', 1, 1, '2024-03-30', '19:00:00', 2, 1),
+(11, 'aa', 'aaaa', 2, 2, '2024-03-29', '18:59:00', 2, 0),
+(15, 'prueba', 'sadas', 2, 2, '2023-06-30', '19:00:00', 2, 1),
+(16, 'probando3', 'probando3', 6, 5, '2024-03-30', '11:42:00', 3, 1),
+(17, 'probando4', 'probando4', 8, 4, '2024-03-31', '21:40:00', 3, 1),
+(18, 'aa', 'sss', 3, 4, '2024-04-01', '14:13:00', 2, 0),
+(19, 'PROBANDO', 'PROBA', 7, 2, '2024-04-10', '14:53:00', 2, 1);
 
 -- --------------------------------------------------------
 
@@ -62,7 +68,7 @@ CREATE TABLE IF NOT EXISTS `control_reservas_equipos` (
   `nombre_equipo` varchar(200) NOT NULL,
   `estado` int NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `control_reservas_equipos`
@@ -70,7 +76,10 @@ CREATE TABLE IF NOT EXISTS `control_reservas_equipos` (
 
 INSERT INTO `control_reservas_equipos` (`id`, `nombre_equipo`, `estado`) VALUES
 (1, 'CAE APOLLO', 1),
-(2, 'SIMULADOR DE PARTO', 1);
+(2, 'SIMULADOR DE PARTO', 1),
+(3, 'SIMULADOR MASCARILLA', 1),
+(4, 'RED NEURONAL', 1),
+(5, 'SIMULADOR DE CORAZON', 1);
 
 -- --------------------------------------------------------
 
